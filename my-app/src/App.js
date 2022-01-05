@@ -3,8 +3,13 @@ import "./App.css";
 import Button from "./components/lib/Button";
 import Table from "./components/lib/Table";
 import Collapse from "./components/lib/Collapse";
+import TodoList from "./components/TodoList/TodoList";
+import{useState} from "react";
 
 function App() {
+
+  let [data,setData] = useState([{id: "test", title: "todo", completed: "false"}]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -56,6 +61,7 @@ function App() {
 
         <Collapse />
 
+        <TodoList data={data} setData = {setData} />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
