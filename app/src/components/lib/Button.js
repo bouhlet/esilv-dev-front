@@ -1,31 +1,29 @@
-function Button({variant = "squared", style = {}, title, onClick}) {
-  //if(!props.style) props.style ={};
-  //props.style = props.style ? props.style.style : {};
-  //props.style = props.style ?? {};
-  //props.style ??={};
-  //const {variant, style, onClick, title} = props;
+function Button({ variant = "squared", style = {}, title, onClick, img }) {
+  //if (!props.style) props.style = {};
+  // <=> props.style = props.style ? props.style : {}
+  // <=> props.style = props.style ?? {}
+  // <=> props.style ??= {};
 
   switch (variant) {
-    case 'squared' :
-      style.borderRadius=0;
+    case "rounded":
+      style.borderRadius = 5;
       break;
-
-    case 'rounded' :
-      style.borderRadius=5;
+    case "round":
+      style.borderRadius = "50%";
+      style.height = 30;
+      style.width = 30;
+      style.overflow = "hidden";
       break;
-    
-    case  'round' :
-      style.borderRadius="50%";
-      break;
-      
-    default:
-      style.borderRadius="27%";
+    case "squared":
+      style.borderRadius = 0;
       break;
   }
-  return(
+
+  return (
     <button onClick={onClick} style={style}>
-    {title}
-  </button>
+      {title}
+      {variant === "round" && img && <img src={img} />}
+    </button>
   );
 }
 

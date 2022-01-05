@@ -8,31 +8,36 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button
-          variant="round"
+          onClick={function handleClick() {
+            alert("5");
+          }}
           title="Button 1"
           style={{ color: "red", backgroundColor: "blue" }}
-          onClick={function handleClick() 
-            {alert("6")}}
+        />
+        <Button
+          img={logo}
+          variant="rounded"
+          title="Button 2"
+          onClick={function handleClick() {
+            alert("6");
+          }}
+          style={{ color: "red", backgroundColor: "yellow" }}
+        />
+        <Button
+          variant="round"
+          img={logo}
+          style={{ color: "red", backgroundColor: "green" }}
+          onClick={function handleClick() {
+            alert("7");
+          }}
         />
         <Button
           variant="squared"
-          title="Button 2"
-          style={{ color: "green", backgroundColor: "yellow" }}
-          onClick={function handleClick() 
-            {alert("7")}}
-        />
-        <Button
-          variant="rounded"
-          title="Button 3"
-          style={{ color: "blue", backgroundColor: "green" }}
-          onClick={function handleClick() 
-            {alert("8")}}
-        />
-        <Button
           title="Button 4"
-          style={{ color: "red", backgroundColor: "green" }}
-          onClick={function handleClick() 
-            {alert("9")}}
+          style={{}}
+          onClick={function handleClick() {
+            alert("8");
+          }}
         />
         <p>
           Edit <code>src/App.js</code> and save to reload.
