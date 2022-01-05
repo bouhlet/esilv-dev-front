@@ -9,12 +9,12 @@
 
 function addTable() {
     const myTableDiv = document.getElementById("root");
-    const table = Table();
+    const table = Table(3,3);
     myTableDiv.appendChild(table);
   }
 
 
-  function Table(nbLines = 10, nbColumns = 10){
+  function Table(nbLines = 5, nbColumns = 5){
     const tableBody = document.createElement('TBODY');
     tableBody.id = "myTable";
     tableBody.border = '1';
@@ -25,7 +25,7 @@ function addTable() {
     return tableBody;
   }
 
-  function Row(lineNum, nbColumns = 5){
+  function Row(lineNum, nbColumns){
     const tr = document.createElement('TR');
 
     for (let j = 0; j < nbColumns; j++) {
