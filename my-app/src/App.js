@@ -1,12 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "./components/lib/Button";
+import Table from "./components/lib/Table";
+import Collapse from "./components/lib/Collapse";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" /> 
         <Button
           onClick={function handleClick() {
             alert("5");
@@ -39,6 +41,21 @@ function App() {
             alert("8");
           }}
         />
+        <Table
+          nbLine="5"
+          nbColumn="5"
+          cellStyle={{color: "purple", fontSize:"medium", margin:"auto"}
+          }
+          cellComponent={<span>Test</span>}
+        />
+        <Table
+          nbLine="5"
+          nbColumn="5"
+          cellStyle={{color: "purple", fontSize:"medium", margin:"auto"}}
+        />
+
+        <Collapse />
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
