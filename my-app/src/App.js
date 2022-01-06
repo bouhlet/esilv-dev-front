@@ -8,7 +8,7 @@ import{useState} from "react";
 
 function App() {
 
-  let [data,setData] = useState([{id: "test", title: "todo", completed: "false"}]);
+  let [data,setData] = useState([{id: "test", title: "todo", completed: false},{id: "test 2", title: "todo 2", completed: true}]);
 
   return (
     <div className="App">
