@@ -16,11 +16,13 @@ function Button({ variant = "squared", style = {}, title, onClick, img }) {
     case "squared":
       style.borderRadius = 0;
       break;
+    default:
+      break;
   }
   return (
     <button onClick={onClick} style={style}>
       {title}
-      {variant === "round" && img && <img src={img} />}
+      {variant === "round" && img && <img src={img} alt="a button" />}
     </button>
   );
 }
