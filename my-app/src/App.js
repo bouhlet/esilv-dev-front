@@ -22,13 +22,13 @@ function App() {
           <Link to="/login">Login </Link>
           <Link to="/collapse">Collpase </Link>
           <Link to="/user-management">User </Link>
-          <Link to="/matchs">Matchs</Link>
+          <Link to="/blblbl">Matchs</Link>
         </nav>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/collapse" element={<Collapse />} />
           <Route path="/user-management" element={<UserList />} />
-          <Route path="/matchs" element={<Matchs />} />
+          <Route path="/blblbl" element={<Matchs />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </header>
