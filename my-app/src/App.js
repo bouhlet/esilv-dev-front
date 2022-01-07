@@ -19,12 +19,14 @@ function App() {
         </Link>
         <nav>
           <Link to="/">Home</Link>
+          <Link to="/login">Login</Link>
           <Link to="/collapse">Collpase</Link>
           <Link to="/user-management">User</Link>
           <Link to="/matchs">Matchs</Link>
           <Link to="/login">Login</Link>
         </nav>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/collapse" element={<Collapse />} />
           <Route path="/user-management" element={<UserList />} />
           <Route path="/login" element={<Login />} />
