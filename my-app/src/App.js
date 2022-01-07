@@ -18,18 +18,16 @@ function App() {
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <nav>
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/collapse">Collpase</Link>
-          <Link to="/user-management">User</Link>
+          <Link to="/">Home </Link>
+          <Link to="/login">Login </Link>
+          <Link to="/collapse">Collpase </Link>
+          <Link to="/user-management">User </Link>
           <Link to="/matchs">Matchs</Link>
-          <Link to="/login">Login</Link>
         </nav>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/collapse" element={<Collapse />} />
           <Route path="/user-management" element={<UserList />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/matchs" element={<Matchs />} />
           <Route path="/" element={<Home />} />
         </Routes>
@@ -90,10 +88,9 @@ function Home() {
         nbLine={5}
         nbColumn={5}
         cellStyle={{ color: "green" }}
-        CellComponent={<span>Test</span>}
+        cellComponent={<span>Test</span>}
       />
       <TodoList data={data} setData={setData} />
-      <TodoList data={data} setData={setData} disableAdd={true} />
       <p>
         Edit <code>src/App.js</code> and save to reload.
       </p>
