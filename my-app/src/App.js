@@ -4,6 +4,7 @@ import Button from "./components/lib/Button";
 import Table from "./components/lib/Table";
 import Collapse from "./components/lib/Collapse";
 import TodoList from "./components/TodoList/TodoList";
+import UserList from "./components/UserManager/UserList";
 import{useState} from "react";
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" /> 
+        {window.location.pathname === "/collapse" && <Collapse />}
+        {window.location.pathname === "/users" && <UserList />}
         <Button
           onClick={function handleClick() {
             alert("5");
@@ -59,7 +62,7 @@ function App() {
           cellStyle={{color: "purple", fontSize:"medium", margin:"auto"}}
         />
 
-        <Collapse />
+
 
         <TodoList data={data} setData = {setData} />
         <p>

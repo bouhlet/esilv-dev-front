@@ -33,7 +33,7 @@ function TodoList({data, setData}) {
         //     }
         // }
         // setData([...data]);
-        setData(data.filter((value) => value.id !== item.id))
+        setData(data.filter((value) => value.id !== item.id));
     }
     function handleToggleComplete(item)//change value => map
     {
